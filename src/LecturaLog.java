@@ -80,7 +80,7 @@ public class LecturaLog {
             // Itera sobre las fechas de acceso y escribe las que están dentro del rango
             for (LocalDateTime l : accesosSSH.keySet()) {
                 if ((l.isAfter(fechaInicio) || l.isEqual(fechaInicio)) && (l.isBefore(fechaFin) || l.isEqual(fechaFin))) {
-                    printWriter.println(l + " " + accesosSSH.get(l)); // Escribe la fecha y la IP en el archivo
+                    printWriter.println(l.getDayOfMonth() + " de " + l.getMonth() + " de " + l.getYear() + " " + accesosSSH.get(l)); // Escribe la fecha y la IP en el archivo
                 }
             }
 
